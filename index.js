@@ -1,4 +1,5 @@
-document.addEventListener("keydown",function(){
+["click","keydown"].forEach(function(evt){
+document.addEventListener(evt,function(){
     var randomNumber1 = Math.floor((Math.random() * 6) + 1);
 var img1Path = "./dice"+randomNumber1+".png";
 var img1Select = document.querySelector(".img1");
@@ -21,4 +22,5 @@ if(randomNumber2 ===randomNumber1){
     text.innerText = "Player 2 Wins🚩";
     
 }
+})
 });
